@@ -1,0 +1,85 @@
+/* Estilos base */
+:root{
+  --bg:#f7fafc;
+  --card:#ffffff;
+  --accent:#81120f;
+  --text:#0f172a;
+  --muted:#64748b;
+  --footer:#b09041;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.25rem}
+.brand img{height:64px;display:inline-block}
+.site-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.site-nav a{text-decoration:none;color:var(--text);padding:.25rem .5rem;border-radius:6px}
+.site-nav a:hover{background:rgba(255,255,255,0.06)}
+.site-nav a.active{background:rgba(255,255,255,0.12);box-shadow:inset 0 -2px 0 rgba(255,255,255,0.15)}
+.nav-toggle{display:none;background:none;border:0;font-size:1.25rem}
+
+.hero{background:linear-gradient(120deg, rgba(14,165,164,0.08), rgba(99,102,241,0.04));padding:3rem 0;text-align:center}
+.hero h1{margin:0 0 .5rem;font-size:2rem}
+.hero p{margin:0 0 1rem;color:var(--muted)}
+.search-form{display:flex;gap:.5rem;justify-content:center}
+.search-form input{padding:.75rem .75rem;border-radius:6px;border:1px solid #e6edf2;min-width:220px}
+.search-form button{background:var(--accent);border:0;padding:.75rem 1rem;color:white;border-radius:6px}
+
+.section{padding:2rem 0}
+.destinos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:var(--card);border-radius:8px;overflow:hidden;box-shadow:none;display:flex;align-items:stretch}
+.card img{width:60%;height:auto;display:block;object-fit:cover}
+.card-body{padding:1rem;flex:1}
+.card h3{margin:.25rem 0}
+.card p{margin:0;color:var(--muted)}
+.btn{display:inline-block;margin-top:.5rem;padding:.5rem .75rem;background:transparent;border:1px solid var(--accent);color:var(--accent);border-radius:6px;text-decoration:none}
+.btn.outline{background:transparent}
+
+/* Modal */
+.modal{display:none;position:fixed;inset:0;z-index:60;align-items:center;justify-content:center}
+.modal[aria-hidden="false"]{display:flex}
+.modal-backdrop{position:absolute;inset:0;background:rgba(2,6,23,0.6)}
+.modal-content{position:relative;background:var(--card);padding:1.25rem;border-radius:10px;max-width:720px;width:90%;z-index:61;box-shadow:0 12px 40px rgba(2,6,23,0.3)}
+.modal-close{position:absolute;right:.5rem;top:.25rem;background:none;border:0;font-size:1.25rem}
+
+.itinerarios-list{list-style:none;padding:0;margin:0;display:grid;gap:.75rem}
+.itinerarios-list li{background:var(--card);padding:1rem;border-radius:8px}
+
+.testimonios-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+blockquote{background:var(--card);padding:1rem;border-left:4px solid var(--accent);border-radius:6px;margin:0}
+blockquote p{margin:0}
+cite{display:block;margin-top:.5rem;color:var(--muted)}
+
+.site-footer{background:var(--footer);color:rgba(255,255,255,0.92);padding:1.25rem 0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.site-footer a{color:rgba(255,255,255,0.95);text-decoration:none}
+.site-footer .brand-block{display:flex;align-items:center;gap:.75rem}
+.site-footer .brand-block img{width:72px;height:72px;object-fit:contain;border-radius:0;box-shadow:none}
+.site-footer h4, .site-footer h3{margin:0;color:rgba(255,255,255,0.95)}
+.site-footer p{margin:0;color:rgba(255,255,255,0.85)}
+
+/* Responsive */
+@media (max-width:900px){
+  .destinos-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:700px){
+  .destinos-grid{grid-template-columns:1fr}
+  .testimonios-grid{grid-template-columns:1fr}
+  .site-nav{display:none}
+  .nav-toggle{display:inline-block}
+  /* Stack image above content on small screens */
+  .card{flex-direction:column}
+  .card img{width:100%;height:auto}
+  /* Smaller footer logo on mobile */
+  .site-footer .brand-block img{width:48px;height:48px}
+  /* Smaller header logo on mobile */
+  .brand img{height:48px}
+}

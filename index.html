@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Agencia de Viajes — Nombre de la Agencia</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+  <a class="brand" href="#"><img src="img/logogrande.png" alt="Univiaje logo"></a>
+      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#itinerarios">Itinerarios</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Descubre el mundo con nosotros</h1>
+        <p>Paquetes personalizados, guías locales y experiencias inolvidables.</p>
+        <form class="search-form" role="search" aria-label="Buscar destinos">
+          <input type="search" placeholder="Buscar destinos, ej. Perú, Italia, Bali" aria-label="Buscar destinos">
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="destinos" class="section destinos container">
+      <h2>Destinos destacados</h2>
+      <div class="grid destinos-grid">
+        <!-- Card ejemplo  -->
+        <article class="card">
+          <img src="img/Bora_Bora.jpg" alt="Playa tropical">
+          <div class="card-body">
+            <h3>Islas Paradisíacas</h3>
+            <p>7 días — Todo incluido</p>
+            <a class="btn" href="packages/islas-paradisiacas.html">Ver paquete</a>
+            <button class="btn outline ver-itinerario" data-itinerary="islas">Ver itinerario</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/ciudad_historica.jpg" alt="Ciudad histórica">
+          <div class="card-body">
+            <h3>Ciudades Históricas</h3>
+            <p>5 días — Tours guiados</p>
+            <a class="btn" href="packages/ciudades-historicas.html">Ver paquete</a>
+            <button class="btn outline ver-itinerario" data-itinerary="ciudades">Ver itinerario</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/ciudad_tre.jpg" alt="Aventura en montaña">
+          <div class="card-body">
+            <h3>Aventura y Trekking</h3>
+            <p>10 días — Guía y equipo</p>
+            <a class="btn" href="packages/aventura-trekking.html">Ver paquete</a>
+            <button class="btn outline ver-itinerario" data-itinerary="aventura">Ver itinerario</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="itinerarios" class="section container">
+      <h2>Itinerarios populares</h2>
+      <ul class="itinerarios-list">
+        <li>
+          <h3>Perú Clásico — 8 días</h3>
+          <p>Cusco, Valle Sagrado, Machu Picchu, lago Titicaca.</p>
+          <button class="btn outline ver-itinerario" data-itinerary="peru">Ver itinerario</button>
+        </li>
+        <li>
+          <h3>Italia Esencial — 10 días</h3>
+          <p>Roma, Florencia, Venecia y la costa Amalfitana.</p>
+          <button class="btn outline ver-itinerario" data-itinerary="italia">Ver itinerario</button>
+        </li>
+        <li>
+          <h3>Bali y Wellsnes — 7 días</h3>
+          <p>Playas, templos y retiros de bienestar.</p>
+          <button class="btn outline ver-itinerario" data-itinerary="bali">Ver itinerario</button>
+        </li>
+      </ul>
+    </section>
+
+    <section id="testimonios" class="section container">
+      <h2>Testimonios</h2>
+      <div class="testimonios-grid">
+        <blockquote>
+          <p>"Un viaje inolvidable. Todo organizado a la perfección."</p>
+          <cite>— Gustavo H.</cite>
+        </blockquote>
+        <blockquote>
+          <p>"Guías locales expertos y experiencias auténticas."</p>
+          <cite>— Angel Mendoza G.</cite>
+        </blockquote>
+        <blockquote>
+          <p>"Repetiría esta experiencia sin dudarlo."</p>
+          <cite>— Zuleima Zometa .</cite>
+        </blockquote>
+            <blockquote>
+          <p>"Que gran experiencia, la atención fue excepcional."</p>
+          <cite>— Herberth Enrique .</cite>
+        </blockquote>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contacto" class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand-block">
+        <img src="img/3.png" alt="Logo Univiaje">
+        <div>
+      
+          <h3>Emilio Agreda</h3>
+          <h3>Fernando Ocotan</h3>
+        </div>
+      </div>
+      <div>
+        <p>Contacto: univiaje@reserva.com</p>
+        <p>Tel: +1 555 123 456</p>
+      </div>
+      
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <!-- Modal de itinerario -->
+  <div id="itinerary-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Cerrar">×</button>
+      <h3 id="modal-title">Itinerario</h3>
+      <div id="modal-body">Cargando...</div>
+    </div>
+  </div>
+</body>
+</html>
