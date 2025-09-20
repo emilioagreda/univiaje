@@ -1,4 +1,4 @@
-# Sitio estático "ViajesPlus"
+# Sitio estático "Univiaje"
 
 Estructura mínima de una página de viajes estática creada para abrir directamente en el navegador.
 
